@@ -14,7 +14,7 @@ SECRET_KEY = '-!ytx-dd-t^yj_0@v%g+12z$)=5qqob-d8km0tq)4$eo9ct&!d'
 DEBUG = True
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['musicbuzz-app.herokuapp.com']
+ALLOWED_HOSTS = ['musicbuzzapp.herokuapp.com']
 
 
 # Application definition
@@ -30,7 +30,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -108,22 +107,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
 
-
-
-
-# HEROKU DEPLOY
-
-#  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
-
-# Updating Database Configuration
-import dj_database_url
-prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)

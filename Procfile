@@ -1,1 +1,1 @@
-web: gunicorn MIR.wsgi --log-file -
+web: gunicorn MIR.wsgi
