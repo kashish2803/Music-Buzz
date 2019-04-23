@@ -1,0 +1,91 @@
+{
+    "status": {
+        "msg": "Success",
+        "code": 0,
+        "version": "1.0"
+    },
+    "metadata": {
+        "music": [{
+            "external_ids": {
+                "isrc": "NOG841803010",
+                "upc": "192562521014"
+            },
+            "play_offset_ms": 8480,
+            "external_metadata": {
+                "deezer": {
+                    "album": {
+                        "name": "Ignite",
+                        "id": "62975822"
+                    },
+                    "artists": [{
+                        "name": "Alan Walker",
+                        "id": "4999707"
+                    }],
+                    "track": {
+                        "name": "Ignite",
+                        "id": "496428212"
+                    }
+                },
+                "spotify": {
+                    "album": {
+                        "name": "Ignite",
+                        "id": "6Rg9tJW4DSAUyNp59VXzu1"
+                    },
+                    "artists": [{
+                        "name": "K-391",
+                        "id": "6pWcSL9wSJZQ9ne0TnhdWr"
+                    }, {
+                        "name": "Alan Walker",
+                        "id": "7vk5e3vY1uw9plTHJAMwjN"
+                    }, {
+                        "name": "Julie Bergan",
+                        "id": "2Tg0aF5cbZktYFzgR1iAKv"
+                    }, {
+                        "name": "Seungri",
+                        "id": "0Uz6o0I1l9koxofV6pQBL0"
+                    }],
+                    "track": {
+                        "name": "Ignite",
+                        "id": "1jLsirPDkUS2g4gnkYua58"
+                    }
+                }
+            },
+            "artists": [{
+                "name": "K-391"
+            }],
+            "title": "Ignite",
+            "release_date": "2018-05-11",
+            "label": "MER",
+            "duration_ms": 209820,
+            "album": {
+                "name": "Ignite"
+            },
+            "acrid": "703e64b5d6043126196a85ab98a35858",
+            "result_from": 3,
+            "score": 100
+        }, {
+            "external_ids": {
+                "isrc": "NOG841707010",
+                "upc": "886446456355"
+            },
+            "play_offset_ms": 8900,
+            "external_metadata": {},
+            "artists": [{
+                "name": "Alan Walker feat. K-391"
+            }],
+            "title": "Ignite (Instrumental)",
+            "release_date": "None",
+            "label": "MER Musikk",
+            "duration_ms": 210000,
+            "album": {
+                "name": "Ignite (Instrumental)"
+            },
+            "acrid": "d4d0eec57818e2bc7350fc39fd450450",
+            "result_from": 3,
+            "score": 100
+        }],
+        "timestamp_utc": "2019-04-21 07:40:07"
+    },
+    "cost_time": 0.45700001716614,
+    "result_type": 0
+}

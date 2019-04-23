@@ -1,0 +1,318 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+    <title>Music Buzz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Music Buzz Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'genre/css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="{% static 'genre/css/style.css' %}" rel='stylesheet' type='text/css' />
+    <!-- font-awesome icons -->
+    <link href="{% static 'genre/css/fontawesome-all.min.css' %}" rel="stylesheet">
+    <!-- //Custom Theme files -->
+    <!--webfonts-->
+    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <!--//webfonts-->
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">
+                    Music Buzz
+                </a>
+                <button class="navbar-toggler ml-lg-auto ml-sm-5" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <ul class="social-iconsv2 buzzinfo ml-lg-5 mx-auto text-center">
+                    <li class="ml-lg-5">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav text-center ml-auto">
+                        <li class="nav-item active  mr-3">
+                            <a class="nav-link" href="index.html">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  mr-3">
+                            <a class="nav-link scroll" href="#contact">contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+    <!-- banner -->
+    <div class="banner" id="home">
+        <div class="container">
+            <div class="banner-text">
+                <div class="slider-info text-right">
+                    <h1 class="text-uppercase">The Ultimate Music Search Website.</h1>
+                    <p class="text-white">Get your Music Identified by Recording it</p>
+                    <a class="btn btn-buzz  mt-4 scroll" href="#upload" role="button">GET STARTED</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+
+    <!-- Upload Audio-->
+    <section class="music-row" id="upload">
+        <div class="row justify-content-center align-items-center no-gutters abbot-main">
+            <div class="col-lg-6 p-0">
+                <img src="{% static 'genre/images/record.png' %}" class="img-fluid" alt="" />
+            </div>
+            <div class="col-lg-6 abbot-right px-md-5  py-lg-0 py-3">
+                <div class="card">
+                    <div class="card-body px-lg-5">
+                        <h3 class="stat-title card-title align-self-center mb-sm-5 mb-3">Record
+                            <br> or upload your music</h3>
+                        <span class="mb-line"></span>
+                        <!-- Submit Music Form -->
+                        <form action="/predict/" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+                            <div class="form-group">
+                                <input type="file" class="form-control-file" name="document">
+                                <input type="submit" class="btn btn-buzz btn-block w-50 mt-5">
+                            </div>
+                        </form>
+                        <!-- End of Form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //Upload Audio -->
+
+    <!-- services -->
+    <section class="about-mbls py-md-5 pb-3" id="services">
+        <div class="row">
+            <div class="col-lg-8 section-3">
+                <div class="col-lg-8 mx-auto py-lg-5">
+                    <h3 class="stat-title text-white">our services</h3>
+                    <div class="row">
+                        <div class="col-md-6 buzzits-abt-grids my-5">
+                            <h4>Tempo Detection</h4>
+                            <p class="sec-4">Get the Tempo/BPM of your audio file using beat tracking algorithm
+                            </p>
+                        </div>
+                        <div class="col-md-6 buzzits-abt-grids my-md-5">
+                            <h4>Genre Classification</h4>
+                            <p class="sec-4">Classify your song's genre by Spectral Domain Analysis and MFCC
+                            </p>
+                        </div>
+                        <div class="col-md-6 buzzits-abt-grids mt-md-0 mt-5">
+                            <h4>Identify your Song</h4>
+                            <p class="sec-4">Get your music identified by our music fingerprinting algorithm
+                            </p>
+                        </div>
+                        <div class="col-md-6 buzzits-abt-grids mt-md-0 mt-5">
+                            <h4>Audio Tagging and Meta Data</h4>
+                            <p class="sec-4">Tag your Audio file with meta information including album art..
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 img-section3 p-0 my-lg-auto mx-auto">
+                <img src="{% static 'genre/images/i4.png' %}" alt="" class="img-fluid">
+            </div>
+        </div>
+    </section>
+    <!-- //services -->
+    <!-- slide -->
+    <div class="slide-music">
+        <div class="container">
+            <div class="slide-img">
+                <img src="{% static 'genre/images/i2.png' %}" alt="" class="img-fluid">
+            </div>
+            <h3 class="stat-title text-lg-right text-center">music buzz</h3>
+
+        </div>
+    </div>
+    <!-- //slide -->
+    <!-- contact top -->
+    <div class="contact-top text-center">
+        <div class="content-contact-top">
+            <h3 class="stat-title text-white">for more information</h3>
+            <h2 class="stat-title text-white">stay in touch</h2>
+            <p class="text-white w-75 mx-auto">We are always interested in feedback from our members and guests. We would be grateful if you could fill in this short form about your time using our Service.
+            </p>
+        </div>
+    </div>
+    <!-- //contact top -->
+    <!-- contact -->
+    <div class="mb-contact py-5" id="contact">
+        <div class="container">
+            <div class="row contact-form pt-md-5">
+                <!-- contact details -->
+                <div class="col-lg-6 contact-bottom d-flex flex-column contact-right-mbls">
+                    <h5>get in touch</h5>
+                    <div class="fv3-contact">
+                        <div class="row">
+                            <div class="col-2">
+                                <span class="fas fa-envelope-open"></span>
+                            </div>
+                            <div class="col-10">
+                                <h6>email</h6>
+                                <p>
+                                    <a href="mailto:example@email.com" class="text-dark">info@musicbuzz.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fv3-contact my-4">
+                        <div class="row">
+                            <div class="col-2">
+                                <span class="fas fa-phone-volume"></span>
+                            </div>
+                            <div class="col-10">
+                                <h6>phone</h6>
+                                <p>+456 123 7890</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fv3-contact">
+                        <div class="row">
+                            <div class="col-2">
+                                <span class="fas fa-home"></span>
+                            </div>
+                            <div class="col-10">
+                                <h6>address</h6>
+                                <p>New Delhi, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 music-form-left my-lg-0 mt-5">
+                    <h5>send us a mail</h5>
+                    <!-- contact form grid -->
+                    <div class="contact-top1">
+                        <form action="#" method="get" class="contact-music">
+                            <div class="form-group d-flex">
+                                <label>
+                                    Name
+                                </label>
+                                <input class="form-control" type="text" placeholder="john" name="email" required="">
+                            </div>
+                            <div class="form-group d-flex">
+                                <label>
+                                    Email
+                                </label>
+                                <input class="form-control" type="email" placeholder="example@email.com" name="email" required="">
+                            </div>
+                            <div class="form-group d-flex">
+                                <label>
+                                    Phone
+                                </label>
+                                <input class="form-control" type="text" placeholder="XXXX XXXX XX" name="email" required="">
+                            </div>
+                            <div class="form-group d-flex">
+                                <label>
+                                    Message
+                                </label>
+                                <textarea class="form-control" rows="5" id="contactcomment" placeholder="Your message" required></textarea>
+                            </div>
+                            <div class="d-flex  justify-content-end">
+                                <button type="submit" class="btn btn-buzz btn-block w-50">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!--  //contact form grid ends here -->
+                </div>
+
+            </div>
+            <!-- //contact details container -->
+        </div>
+    </div>
+    <!-- //contact -->
+    <!-- copyright -->
+    <div class="cpy-right text-center">
+        <p>© 2018 Music Buzz. All rights reserved.</p>
+    </div>
+    <!-- //copyright -->
+    <!-- js-->
+    <script src="{% static 'genre/js/jquery-2.2.3.min.js' %}"></script>
+    <!-- js-->
+    <!-- start-smooth-scrolling -->
+    <script src="{% static 'genre/js/move-top.js' %} "></script>
+    <script src="{% static 'genre/js/easing.js' %} "></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll ").click(function (event) {
+                event.preventDefault();
+
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+    <script>
+        $(document).ready(function () {
+            /*
+             var defaults = {
+                 containerID: 'toTop', // fading element id
+                 containerHoverID: 'toTopHover', // fading element hover id
+                 scrollSpeed: 1200,
+                 easingType: 'linear'
+             };
+             */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <script src="{% static 'genre/js/SmoothScroll.min.js' %}"></script>
+    <!-- //smooth-scrolling-of-move-up -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'genre/js/bootstrap.js' %}">
+    </script>
+    <!-- //Bootstrap Core JavaScript -->
+</body>
+
+</html>

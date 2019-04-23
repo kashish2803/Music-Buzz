@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login V3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+<!--===============================================================================================-->
+    <link href="{% static 'genre/css/bootstrap.min.css' %}" rel='stylesheet' type='text/css' />
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'genre/css/predict.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url({% static 'genre/images/bg-01.jpg' %});">
+            <div class="wrap-login100" style="text-align:center;">
+                <h2 class="predict-header mb-4">Prediction</h2>
+
+                {% if img_path %}
+                    <img src="{% static 'genre/images/downloads/' %}{{img_path}}" style="height: 220px" class="pred-img mb-4">
+                    {% else %}
+                    <img src="{% static 'genre/images/shadow.jpg' %}" style="height: 220px; width: 250px;" class="pred-img mb-4">
+                {% endif %}
+
+
+                {% if title %}
+                    <p>Song Name: <b>{{title}}</b></p>
+                    {% else %}
+                    <p>Song Name: NO DATA AVAILABLE</p>
+                {% endif %}
+
+                {% if artist %}
+                    <p>Artist(s): <b>{{artist}}</b></p>
+                    {% else %}
+                    <p>Artist(s): NO DATA AVAILABLE</p>
+                {% endif %}
+
+                {% if predict_class %}
+                    <p>Genre: <b>{{predict_class}}</b></p>
+                    {% else %}
+                    <p>Genre: NO DATA AVAILABLE</p>
+                {% endif %}
+
+                {% if tempo %}
+                    <p>Tempo: <b>{{tempo}}</b></p>
+                    {% else %}
+                    <p>Tempo: NO DATA AVAILABLE</p>
+                {% endif %}
+
+                <button type="button" class="btn btn-primary mt-2">
+                    <a href="{% url 'genre-index' %}">Try Again?</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+<!--===============================================================================================-->
+    <script src="{% static 'genre/js/jquery-2.2.3.min.js' %}"></script>
+<!--===============================================================================================-->
+    <script src="{% static 'genre/js/bootstrap.js' %}"></script>
+<!--===============================================================================================-->
+</body>
+</html>
