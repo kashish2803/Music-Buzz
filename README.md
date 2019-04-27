@@ -21,10 +21,6 @@ Although many studies have been conducted using GTZAN, several faults have been 
 
 Details on the GTZAN Music Genre Dataset are presented in the table below. In GTZAN, each song is recorded at a sampling rate of 22.05 kHz and mono 16-bit audio files in .wav format.
 
-<p align="center">
-<img src="assets/GTZAN.png?raw=true" alt="GTZAN" width="500">
-</p>
-
 ## Pre-processing
 
 First, the input signal is sent to a high pass filter. The pre-emphasis increases the relative energy of the high-frequency spectrum 
@@ -64,21 +60,6 @@ PIL    version 5.0.0
 librosa verion 0.6.3
 
 
-## Complete Installation
-
-1. Download Data from the link below
-
-   GTZAN Dataset
-   https://drive.google.com/open?id=16YkvirrRcdhqxix_0DBBjZeri4bjcfff
-
-2. Locate the data in your working directory and change the path in master_config.ini
-
-3. Download and install libraries (See Dependancy)
-pip install -r requirements.txt
-
-4. run "audio_dataset_maker.py" then "music_genre_classification.py"
-
-
 ## References
 [1] B. L.Sturm, "The GTZAN dataset: Its contents, its faults, their effects on evaluation, and its
 future use," arXiv preprint arXiv:1306.1461, 2013.
@@ -93,11 +74,4 @@ E), 2013 IEEE International Conference on (pp. 1-6). IEEE, July, 2013.
 
 
 ## Author
-
-Akihiro Inui
-http://www.portfolio.akihiroinui.com
-
-
-## License
-
-MusicGenreClassification is available under the MIT license. See the LICENSE file for more info.
+Kashish Nagpal
