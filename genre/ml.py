@@ -9,7 +9,6 @@ import librosa
 import numpy as np
 import subprocess
 
-print(os.getcwd())
 # ArcCloud
 from ArcCloud.acrcloud.recognizer import ACRCloudRecognizer
 from ArcCloud.acrcloud.recognizer import ACRCloudRecognizeType
@@ -97,3 +96,4 @@ def get_song_info(songname):
     json_data = re.recognize_by_file(songname, 0, 10)
 
     return json_data
+

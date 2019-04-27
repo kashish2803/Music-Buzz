@@ -13,8 +13,8 @@ SECRET_KEY = '-!ytx-dd-t^yj_0@v%g+12z$)=5qqob-d8km0tq)4$eo9ct&!d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['musicbuzzapp.herokuapp.com']
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['musicbuzzapp.herokuapp.com']
 
 
 # Application definition

@@ -20,7 +20,7 @@ def index(request):
 
 def predict(request):
     if request.method == 'POST':
-
+        pdb.set_trace()
         # Uploading file to MEDIA DATABASE
         uploaded_file = request.FILES['document']
         fs = FileSystemStorage()
@@ -35,10 +35,15 @@ def predict(request):
 
         # Recognizing Song name and title
         song_data = get_song_info(song_dir)
+
         # Loading to JSON
         song_data_json = json.loads(song_data)
-        title = song_data_json['metadata']['music'][0]['title']
-        artist = song_data_json['metadata']['music'][0]['artists'][0]['name']
+        if song_data_json['status']['code'] == 3000:
+            title = "NOT FOUND"
+            artist = "NOT FOUND"
+        else:
+            title = song_data_json['metadata']['music'][0]['title']
+            artist = song_data_json['metadata']['music'][0]['artists'][0]['name']
 
         # Getting Artist Image
         os.chdir(os.path.join(BASE_DIR,'genre/static/genre/images'))
